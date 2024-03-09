@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="keywords" content="HTML5 Template" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Wote Pamodja</title>
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon -->
+        <!--<link rel="shortcut icon" href="www/favicon.ico">-->
+        <link rel="icon" type="image/png" href="www/images/basic/logo.png" />
+
+        <!-- Google Webfont -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,300italic,700,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="www/css/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="www/css/bootstrap.min.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="www/js/vendors/isotope/isotope.css">
+        <link rel="stylesheet" href="www/js/vendors/slick/slick.css">
+        <link rel="stylesheet" href="www/js/vendors/rs-plugin/css/settings.css">
+        <link rel="stylesheet" href="www/js/vendors/select/jquery.selectBoxIt.css">
+        <link rel="stylesheet" href="www/css/subscribe-better.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css">     
+        <link rel="stylesheet" href="www/plugin/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="www/plugin/owl-carousel/owl.theme.css">
+        <link rel="stylesheet" href="www/css/style.css">
+        <!-- <link rel="stylesheet" href="www/css/wote.css"> -->
+        
+
+        
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+                <![endif]-->
+
+    </head>
+    <body>
+
+        <!-- PRELOADER -->
+        <div id="loader"></div>
+
+        <div class="body">
+            <!-- TOPBAR -->
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="tb_left pull-left">
+                                    <p><strong>Bienvenu sur le site de l'Association WOTE PAMODJA !</strong></p>
+                                </div>
+                                <div class="tb_center pull-left">
+                                    <ul>
+                                        <li><i class="fa fa-phone"></i> Hotline: <a href="#">(+33)635517092</a></li>
+                                        <li><i class="fa fa-envelope-o"></i> <a href="mailto:awotepamodja243@gmail.com">E-mail</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tb_right pull-right">
+                                    <ul>
+                                        
+                                        
+                                        <?php if(isset($_SESSION['login_prenom'])){ ?>
+                                            <li>
+                                                <div class="tbr-info">
+                                                    <span>Bonjour, <?php echo $_SESSION['login_prenom']; ?></span>
+                                                </div>
+                                            </li>
+                                             <li>
+                                                <div class="tbr-info">
+                                                    <a href="index.php?action=forum_showMemberProfile&id=$_SESSION['']"><span>Mon compte</span></a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li>
+                                                <div class="tbr-info">
+                                                    <a href="index.php?action=deconnexion"><span>Déconnexion</span></a>
+                                                </div>
+                                            </li>
+                                            
+                                            
+                                            
+                                        
+                                        <?php }else{ ?>
+                                            <li>
+                                                <div class="tbr-info">
+                                                    <a href="index.php?action=connexion_inscription"><span>Connexion / Inscription</span></a>
+                                                </div>
+                                            </li>
+                                        
+                                        <?php } ?>
+                                        
+                                       
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HEADER -->
+            <header>
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <div class="row">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="./index.html"><img src="www/images2/image5.png" class="img-responsive" alt="" width="100"/></a>
+                            </div>
+                           
+                            <!-- Cart & Search -->
+                         <div class="header-xtra pull-right">
+                                <div class="topsearch">
+                                    <span>
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                    <form class="searchtop" method="GET" action="index.php">
+                                       <!--  // pas moyen de faire (form action="index.php?action ") dans un formulaire alors  j envoie un input hidden pour recuperer l action recherche  pour que index.php identifie la page de destination -->
+
+                                        <input type="hidden" name="action" value="recherche">
+                                        <input type="text" placeholder="Search entire store here." name="motcle">
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Navmenu -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right"> 
+                            
+                                    <li class="dropdown">
+                                       
+                                        <a href="./index.php"  role="button" >ACCUEIL</a>
+                                    </li>
+                                    <li class="dropdown">
+                                       
+                                        <a href="./index.php"  role="button" >A PROPOS</a>
+                                    </li>
+                                    <li class="dropdown">
+                                       
+                                        <a href="#"  role="button" >AGIR AVEC WOTE PAMODJA</a>
+                                    </li>
+                                    <?php foreach($men as $mens) { ?>
+                                        <li>
+                                            <?php // on a envoyé le titre et id de chaque menu a la page menu.php avec la methode GET( pour envoyer des informations dans un lien avec le GET, j utilise "?" (ca remplace 'method="GET"' dans la balise form))?>
+                                            <a href="index.php?action=menu&titre=<?php echo $mens['titre']; ?>&id=<?php echo $mens['id']; ?>"  role="button" ><?php echo $mens['titre']; ?></a>
+                                        </li>
+                                        <?php } ?>
+
+                                        <li class="dropdown">
+                                       
+                                       <a href="index.php?action=forum_allQuestions"  role="button" >FORUM</a>
+                                   </li>
+
+                                        <!-- <li class="dropdown">
+                                           
+                                            <a href="#"  role="button"  onclick="toggleMenu()">FORUM</a>
+                                            
+
+                                                        <div class="sub-menu-wrap" id="subMenu">
+                                                            <div class="sub-menu">
+
+                                                               <a href="#" class="sub-menu-link">
+                                                                    <p>Edit Profile</p>
+                                                               </a>
+                                                               <a href="#" class="sub-menu-link">
+                                                                      <p>Edit Profile</p>
+
+                                                               </a>
+                                                               <a href="#" class="sub-menu-link">
+                                                                     <p>Edit Profile</p>
+
+                                                               </a>       
+                                                               <a href="#" class="sub-menu-link">
+                                                                     <p>Edit Profile</p>
+
+                                                               </a>
+                                                            </div>
+                                                        </div>
+                                        </li> -->
+                                    <!-- <li>
+                                        <div class="dropdown">
+                                        
+  <a href="#"  role="button" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    FORUM</a>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="forum_publishQuestion.php">Forum</a></li>
+    <li><a class="dropdown-item" href="forum_showAllQuestion.php">Les questions</a></li>
+    <li><a class="dropdown-item" href="#">Publier une question</a></li>
+    <li><a class="dropdown-item" href="./forum_myQuestion.php">Mes questions</a></li>
+   
+  </ul>
+</div>
+
+                                    </li> -->
+
+                                </ul>
+                                
+                            </div>   
+                        </div>
+                    </div>
+                </nav>
+                
+            </header>

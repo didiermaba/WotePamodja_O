@@ -1,0 +1,114 @@
+<div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                   
+                                    <h4 class="page-title">Liste des membres</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title -->
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-box">
+                                  
+        
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap">
+                                        <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Civilité</th>
+                                            <th>Nom</th>
+                                            <th>Prénom</th>
+                                            <th>Date de naissance</th>
+                                            <th>E-mail</th>
+                                            <th>Pseudo</th>
+                                            <th>Adresse</th>
+                                            <th>CP</th>
+                                            <th>Ville</th>
+                                            <th>Options</th>
+                                        </tr>
+                                        </thead>
+        
+        
+                                        <tbody>
+
+                                        <?php foreach($membre as $membre){ ?>
+                                        <tr>
+                                            
+                                            <td><?php echo $membre['id']; ?></td>
+                                            <td><?php echo $membre['civilite']; ?></td>
+                                            <td><?php echo $membre['nom']; ?></td>
+                                            <td><?php echo $membre['prenom']; ?></td>
+                                            <td><?php echo $membre['date_naissance']; ?></td>
+                                            <td><?php echo $membre['email']; ?></td>
+                                            <td><?php echo $membre['pseudo']; ?></td>
+                                            <td><?php echo $membre['adresse']; ?></td>
+                                            <td><?php echo $membre['cp']; ?></td>
+                                            <td><?php echo $membre['ville']; ?></td>
+                                            <td>
+
+                                                <a href="membre_liste.php?id=<?php echo $membre['id'];?>" onclick="return confirm('Confirmez-vous la suppression ?')" class="btn btn-pink waves-effect waves-light"> <i class="mdi mdi-trash-can"></i> <span>Supprimer</span> </a>
+                                                <!--<a href="admin-liste.php?id=" onclick="return confirm('Are you sure?')" class="btn btn-pink waves-effect waves-light"> <i class="mdi mdi-trash-can"></i> <span>Modifier</span> </a> -->
+                                            </td>
+                                        </tr>
+                               
+                                        <?php } ?>
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        <!-- <a href="admin_ajouter.php">Ajouter un administrateur</a> -->
+                                    </p>
+                                </div> <!-- end card-box -->
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+        
+        
+
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+              <!--  <footer class="footer">
+                   <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                Association Wote Pamodja par <a href="">Didier MABA</a> 
+                            </div> 
+                        </div>
+                    </div>
+                </footer>-->
+                <!-- end Footer -->
+
+            </div>
+
+       <script src="assets/js/vendor.min.js"></script>
+
+        <!-- datatable js -->
+        <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        
+        <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables/buttons.flash.min.js"></script>
+        <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+        <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.select.min.js"></script>
+
+        <!-- Datatables init -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>

@@ -1,0 +1,109 @@
+
+
+<div class="block-main container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="block-content">
+                            <img src="www/images/blocks/1.jpg" class="img-responsive" alt=""/>
+                            <div class="bs-text-down text-center hvr-outline-out">
+                                Texte<span> Texte</span>				
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="block-content">
+                            <img src="www/images/blocks/2.jpg" class="img-responsive" alt=""/>
+                            <div class="bs-text-center text-center">
+                            Texte<span>Texte</span>				
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="block-content">
+                            <img src="www/images/blocks/3.jpg" class="img-responsive" alt=""/>
+                            <div class="bs-text-down text-center">
+                            Texte<span>Texte</span>				
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+      
+        <div class="header-bar-text">
+            <div class="container">
+                <p> 
+                    <span class="header-bar-text">
+                        <svg class="icon icon-xxl" aria-hidden="true" focusable="false">
+                            <use xlink:href="#square-heart"></use>
+                        </svg>
+            
+                      <h3> <strong><i>"Main dans la main pour redonner le sourire à son prochain"</i></strong></h3> 
+                    </span>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <!-- <button type="button" class="btn btn-primary btn-lg">❤️ FAIRE UN DON  </button> -->
+</div>
+</div>
+                   
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container text-center">
+        <img src="www/images/basic/image7.jpg" class="img-fluid" alt="..." height="500" ><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam sunt autem, numquam debitis itaque voluptate saepe accusantium doloremque eos consequatur ipsa corporis. Ad accusamus, soluta dicta, velit itaque fugit veniam dignissimos quibusdam sed quisquam placeat rerum ex repellat. Repudiandae, asperiores. Ab veniam nam omnis adipisci laborum accusamus odio? Dolor quaerat assumenda eveniet sapiente nostrum ipsa cumque accusantium sunt fuga! Placeat facilis, officiis vitae quisquam tempore distinctio porro saepe iusto deleniti voluptatem laboriosam ducimus fugiat, eos, enim facere veritatis amet!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis sequi eos, facere earum sapiente, asperiores iste aperiam ipsam doloremque iusto expedita vero, magnam necessitatibus nemo dolorum fugit? Dolore qui ullam neque deserunt alias atque ipsa perferendis, obcaecati quidem libero. Asperiores praesentium voluptatibus nisi voluptatem? Dolores asperiores id cum quidem, in error repellendus laborum, dolor praesentium minima reprehenderit repudiandae. Ratione veniam, et provident rem earum quod. Velit neque tempore earum adipisci amet et nisi esse debitis, perferendis voluptatum facilis dicta. Quos necessitatibus unde nulla porro veniam, cupiditate sint distinctio officia asperiores corrupti modi. Nemo dolorem commodi dignissimos veritatis alias, ex porro eius neque molestiae, pariatur nihil officia amet minus iste, provident consequuntur et debitis esse dolorum ipsa aliquid rerum tempore! Dolorum atque, nihil consectetur sed animi nostrum, ducimus laborum praesentium deleniti error sit! Pariatur, autem excepturi temporibus veniam repellendus, eligendi corporis aut amet omnis nemo sit optio consectetur eum animi minima quidem exercitationem voluptatibus suscipit nisi assumenda est accusantium ratione! Distinctio neque blanditiis mollitia, maxime veniam animi fuga quam aliquid eaque vero ipsa deserunt quaerat obcaecati ut similique aspernatur! Officiis repellendus obcaecati voluptas iusto, sed quis ad maxime veritatis eos inventore id architecto aliquam omnis explicabo nisi accusamus placeat incidunt laborum optio, quas et recusandae quibusdam impedit? Sint unde eveniet repudiandae tempora ipsum voluptas totam, impedit dolorum harum veniam accusantium alias voluptatum ratione eos, iusto cum? Dolore fuga explicabo dolorem provident neque molestias odit esse beatae perferendis, reiciendis, enim unde mollitia nemo ab corporis vitae, suscipit pariatur animi quasi eos commodi.
+        </p>
+        </div>
+      
+        
+        <main class="main" id="main" style="padding-top: 101px;">
+        <h1 class="visually-hidden">Woté Pamodja France</h1>
+        <section class="banner banner-featured bg-primary" aria-label="À la une" ;> <!--style="background-image:""" -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<h2 class="banner-title"><a href="" class="text-background text-background-tertiary link-stretched">Venez vivre nos chantiers pour l'année 2024 !</a></h2>
+					<span class="btn btn-large btn-solid btn-primary" aria-hidden="true">Les inscriptions, c'est par ici...</span>
+				</div>
+			</div>
+		</div>
+	</section>
+    </main>
+    <br>
+
+   
+     
+    
+    <!-- FEATURED PRODUCTS -->
+ <div class="featured-products">
+                <div class="container">
+                    <div class="row">
+                        <h5 class="heading"><span></span></h5>
+                       
+                        <div id="isotope" class="isotope">
+
+                         <?php foreach($articles as $artti){?> 
+                            <div class="isotope-item">
+                                <div class="product-item">
+                                    <div class="item-thumb">
+                                        <img src="<?php echo $artti['image'] ?>" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-title"><a href="index.php?action=article&id=<?php echo $artti['id'] ?>"><?php echo $artti['titre'];?></a></h4>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                      
+                          <?php } ?>  
+                          
+                        </div>
+                    </div>
+                </div>
+</div>
+
+           

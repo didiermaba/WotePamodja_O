@@ -1,0 +1,79 @@
+<div>
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="index.php?action=forum_allQuestions">Forum</a>-->
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=forum_allQuestions">Les questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=publish-question">Publier une question</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=my-question">Mes questions</a>
+        </li>
+        <!-- <?php 
+            if(isset($_SESSION['auth'])){
+
+              ?>
+
+              <li class="nav-item">
+              <a class="nav-link" href="profile.php?id=<?= $_SESSION['id']; ?>">Mon Profil</a>
+              </li>
+
+           <?php 
+            }
+
+            ?> -->
+        
+      </ul>
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+<br><br>
+
+<div class="container">
+   <form method="GET">
+      <div class="form-group row">
+          <div class="col-8">
+            <input type="search" name="search" id="" class="form-control">
+          </div><br>
+          <div class="col-4">
+            <button class="btn btn-success" type="submit">Rechercher</button> 
+          </div>
+      </div>
+   </form>
+<br><br>
+
+<?php 
+
+foreach ($AllQuestions as $question) {
+   $idQuestion = $question['id'];
+   ?>
+   <div class="card">
+      <div class="card-header">
+        <a href="index.php?action=forum_showArticleContents&id=<?= $question['id']; ?>"><?= $question['titre']; ?></a>
+      </div>
+      <div class="card-body">
+         <?= $question['description']; ?>
+      </div>
+      <div class="card-footer">
+         Publié par <a href="index.php?action=forum_showMemberProfile.php&id=<?= $question['id_auteur']; ?>"><?= $question['prenom_auteur']; ?></a> le <?= $question['date_publication']; ?>
+      </div>
+      <br>
+      <p>Cette question a reçu <?php echo $nbrComments[$idQuestion]; ?> réponse(s)</p>
+   </div>
+   <hr>
+   <?php
+}
+?>
+</div>

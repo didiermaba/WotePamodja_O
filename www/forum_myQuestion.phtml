@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!--<a class="navbar-brand" href="forum_publishQuestion.php">Forum</a>-->
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=forum_allQuestions">Les questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=publish-question">Publier une question</a>
+        </li>
+        <li class="nav-item">
+          <?php if (isset($_SESSION['login_id'])) { ?>
+            <a class="nav-link" href="index.php?action=my-question">Mes questions</a>
+          <?php } else { ?>
+            <a class="nav-link" href="index.php?action=connexion_inscription">Connectez-vous ou inscrivez-vous</a>
+          <?php } ?>
+        </li>
+        <!--     <?php
+                  if (isset($_SESSION['auth'])) {
+
+                  ?>
+
+              <li class="nav-item">
+              <a class="nav-link" href="profile.php?id=<?= $_SESSION['id']; ?>">Mon Profil</a>
+              </li>
+
+              <li class="nav-item">
+              <a class="nav-link" href="actions/users/logoutAction.php">Déconnexion</a>
+              </li>
+           <?php
+                  }
+
+            ?>-->
+
+      </ul>
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+<br><br>
+
+<div class="container">
+  <!--Ajout d'une confirmation de modification de la question -->
+  <?php if (isset($_SESSION['modif_ok']) && $_SESSION['modif_ok'] == 1) { ?>
+    
+    <div class="alert alert-success" role="alert">
+      <?php echo 'La modification de votre question à bien été effectuée ' ?>
+    </div>
+  <?php $_SESSION['modif_ok'] = 0; // Réinitialisez la variable de session
+} ?>
+<!--Fin de confirmation de modification de la question -->
+<?php
+  if (isset($_SESSION['login_id'])) {
+    if (empty($AllMyQuestions)) {
+      echo '<div class="alert alert-info">Vous n\'avez pas encore publié de question sur notre forum.</div>';
+    } else {
+      foreach ($AllMyQuestions as $question) {
+  ?>
+        <div class="card">
+          <h5 class="card-header"><?= $question['titre']; ?></h5>
+          <div class="card-body">
+            <p class="card-text"><?= $question['description']; ?></p>
+            <a href="index.php?action=forum_showArticleContents&id=<?= $question['id']; ?>" class="btn btn-primary">Accéder à la question</a>
+            <a href="index.php?action=forum_editQuestion&id=<?= $question['id']; ?>" class="btn btn-warning">Modifier la question</a>
+            <a href="index.php?action=forum_deleteQuestion&id=<?= $question['id']; ?>" onclick="return confirm('Etes vous sur de vouloir Supprimer cette question?')" class="btn btn-danger">Supprimer la question</a>
+          </div>
+        </div>
+        <br>
+  <?php
+      }
+    }
+  } else {
+    echo '<div class="alert alert-warning">Connectez-vous ou inscrivez-vous pour voir vos questions.</div>';
+  }
+  ?>
+
+
+</div>

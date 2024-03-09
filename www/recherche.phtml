@@ -1,0 +1,38 @@
+
+
+
+            <!--  articles -->
+            <div class="featured-products">
+                <div class="container">
+                    <div class="row">
+                        <h5 class="heading"><span>Articles</span></h5>
+                       
+                        <div id="isotope" class="isotope">
+
+                            <?php foreach($articles as $art){ ?>
+                            <div class="isotope-item">
+                                <div class="product-item">
+                                    <div class="item-thumb">
+                                        <img src="<?php echo $art['image'];?>" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-title"><a href="article.php?id=<?php echo $art['id'];?>"></a></h4>
+                                                                               
+                                    </div>
+                                </div>
+                            </div>
+                         
+                            <?php } ?>
+
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+           
+
+           
